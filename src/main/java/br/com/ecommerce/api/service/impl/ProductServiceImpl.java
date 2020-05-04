@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public Product create(String title, String description, double price, String cover, double discount, int stock) {
+    public Product create(String title, String description, double price, String cover, double discount, int stock, boolean available) {
         Product product = new Product();
         product.setTitle(title);
         product.setDescription(description);
@@ -24,6 +24,7 @@ public class ProductServiceImpl implements ProductService {
         product.setCover(cover);
         product.setDiscount(discount);
         product.setStock(stock);
+        product.setAvailable(available);
         product.setCreatedAt(new Date(new java.util.Date().getTime()));
 
         if (product.getStock() > 0) {

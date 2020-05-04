@@ -25,7 +25,7 @@ public class AdminController {
     public ResponseEntity<Product> productCreate(@RequestBody Product body) {
         try {
             System.out.println(body.getPrice());
-            Product product = productService.create(body.getTitle(), body.getDescription(), body.getPrice(), body.getCover(), body.getDiscount(), body.getStock());
+            Product product = productService.create(body.getTitle(), body.getDescription(), body.getPrice(), body.getCover(), body.getDiscount(), body.getStock(), body.isAvailable());
             return ResponseEntity.ok(product);
         } catch (Exception e) {
             System.out.println(e.getMessage());

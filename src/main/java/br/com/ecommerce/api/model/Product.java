@@ -39,7 +39,7 @@ public class Product {
 
     public Product() {}
 
-    public Product(int id, String title, String description, double price, String cover, double discount, int stock, Date createdAt) {
+    public Product(int id, String title, String description, double price, String cover, double discount, int stock, boolean available, Date createdAt) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -47,6 +47,7 @@ public class Product {
         this.cover = cover;
         this.discount = discount;
         this.stock = stock;
+        this.available = available;
         this.createdAt = createdAt;
     }
 

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    Product create(String title, String description, double price, String cover, double discount, int stock);
+    Product create(String title, String description, double price, String cover, double discount, int stock, boolean available);
 
     Product update(Product product);
 
