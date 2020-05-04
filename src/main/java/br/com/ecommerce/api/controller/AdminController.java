@@ -40,12 +40,12 @@ public class AdminController {
     }
 
     @GetMapping("/product")
-    public ResponseEntity<List<Product>> findAll() {
+    public ResponseEntity<List<Product>> findAllProducts() {
         return ResponseEntity.ok(productService.findAll());
     }
 
     @GetMapping("/order")
-    public ResponseEntity<List<Order>> findAll(@PathVariable Integer id) {
+    public ResponseEntity<List<Order>> findAllOrders() {
         return ResponseEntity.ok(orderService.findAll());
     }
 
