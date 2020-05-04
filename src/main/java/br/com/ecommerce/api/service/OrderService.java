@@ -15,4 +15,6 @@ public interface OrderService {
 
     List<Order> findByCustomer(Customer customer);
 
+    List<Order> findAll();
+
 }

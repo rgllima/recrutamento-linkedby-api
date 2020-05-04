@@ -14,6 +14,7 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 
     Order findById(int id);
 
-//    @Query("SELECT new Order (o.id, o.customer, o.items, o.total) FROM EOrder o WHERE o.customer=(:customer_id)")
     List<Order> findByCustomer(Customer customer);
+
+    List<Order> findAll();
 }
